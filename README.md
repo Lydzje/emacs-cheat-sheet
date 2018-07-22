@@ -1,6 +1,7 @@
-# Emacs Cheat Sheet :page_facing_up:
+# My Emacs Configuration :pushpin:
 
-## Navigation :car:
+## Cheat sheet :page_facing_up:
+### Navigation :car:
 | Command | Operation |
 |---------|-----------|
 | `C+p`   | Previous line |
@@ -17,7 +18,7 @@
 | `C+s`     | Forward search |
 | `C+r`     | Backward search |
 
-## Editing :pencil2:
+### Editing :pencil2:
 | Command | Operation |
 |---------|-----------|
 | `C+w`     | Cut       |
@@ -29,7 +30,7 @@
 | `C+k`     | Cut from cursor to end of line |
 | `M+k`     | Cut from cursor to end of sentence |
 
-## Files and buffers :floppy_disk:
+### Files and buffers :floppy_disk:
 | Command | Operation |
 |---------|-----------|
 | `C+x, C+f` | Finds a file |
@@ -39,7 +40,7 @@
 | `C+x, s` | Save some buffers |
 
 
-## Windows :white_square_button:
+### Windows :white_square_button:
 | Command | Operation |
 |---------|-----------|
 | `C+x, 1`  | Close other windows |
@@ -49,7 +50,7 @@
 | `C+x, o`  | Focus other window |
 | `C+M+v'`   | Scroll other window |
 
-## Misc :information_source:
+### Misc :information_source:
 | Command | Operation |
 |---------|-----------|
 | `C+x, C+c` | Quit Emacs |
