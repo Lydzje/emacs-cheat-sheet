@@ -48,7 +48,7 @@
 | `C+x, 3`  | Split window vertically |
 | `C+x, 0`  | Close current window |
 | `C+x, o`  | Focus other window |
-| `C+M+v'`   | Scroll other window |
+| `C+M+v`   | Scroll other window |
 
 ### Misc :information_source:
 | Command | Operation |
