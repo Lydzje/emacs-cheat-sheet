@@ -11,3 +11,4 @@
 ;; MISCELLANEOUS
 ;; ==============================================
 (setq pcomplete-ignore-case t)
+(setq vc-follow-symlinks nil)
