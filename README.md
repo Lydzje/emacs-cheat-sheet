@@ -1,4 +1,4 @@
-# My Emacs Configuration :pushpin:
+# My Emacs Configuration :pencil: :triangular_ruler:
 
 ## Cheat sheet :page_facing_up:
 ### Navigation :car:
