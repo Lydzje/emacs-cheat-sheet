@@ -17,7 +17,7 @@
  '(custom-enabled-themes (quote (granger)))
  '(custom-safe-themes
    (quote
-    ("72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" default)))
+    ("3b11ab02a8b96f4f4eb67aec91dfc8afc3364f2605eabb54198763325dc8ae7e" "de2b53d3fb8d65566acd9f30a9972380d81b6ff69880c86ae01d253ee4d3e2a3" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" default)))
  '(fringe-mode 10 nil (fringe))
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")

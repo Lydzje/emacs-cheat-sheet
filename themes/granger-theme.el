@@ -26,7 +26,7 @@
     'granger
     '(linum-format " %7i "))
 
-  (let ((background "#111013")
+  (let ((background "#131215")
         (selection  "#11253A"))
 
   (custom-theme-set-faces
