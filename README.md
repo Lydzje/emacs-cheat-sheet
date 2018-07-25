@@ -39,7 +39,7 @@
 | `C+x, C+b` | List buffers |
 | `C+x, b` | Switch buffer |
 | `C+x, s` | Save some buffers |
-
+| `M+g`	   | Magit status |
 
 ### Windows :white_square_button:
 | Command | Operation |
