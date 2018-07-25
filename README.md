@@ -4,8 +4,8 @@
 ### Navigation :car:
 | Command | Operation |
 |---------|-----------|
-| `C+p`   | Previous line |
-| `C+n`     | Next line |
+| `C+p` or 'M+p' | Previous line |
+| `C+n` or 'C+n' | Next line |
 | `C+b`     | Backward character |
 | `C+f`     | Forward character |
 | `M+b`     | Backward word |

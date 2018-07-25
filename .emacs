@@ -17,7 +17,7 @@
  '(custom-enabled-themes (quote (granger)))
  '(custom-safe-themes
    (quote
-    ("3b11ab02a8b96f4f4eb67aec91dfc8afc3364f2605eabb54198763325dc8ae7e" "de2b53d3fb8d65566acd9f30a9972380d81b6ff69880c86ae01d253ee4d3e2a3" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" default)))
+    ("8e4f53b832f5d9ecfdb5faaf68ecfb33d8ac070518dbefde35755e4d7ce61e27" "f8c36b81e754f0421c937a10c1b7cb1e8c2d36ab728a021f1eb90bed38450240" "a16fc5777b99f592e47c9c9f9f09ee098e27bbc87c6540486368fa363f9ccae8" "3b11ab02a8b96f4f4eb67aec91dfc8afc3364f2605eabb54198763325dc8ae7e" "de2b53d3fb8d65566acd9f30a9972380d81b6ff69880c86ae01d253ee4d3e2a3" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" default)))
  '(fringe-mode 10 nil (fringe))
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
@@ -37,8 +37,10 @@
 ;; NAVIGATION
 ;; ==============================================
 (add-to-list 'load-path "~/.emacs.d/packages/")
-(global-set-key (kbd "M-o") 'ace-window)
 (setq aw-dispatch-always t)
+(global-set-key (kbd "M-o") 'ace-window)
+(global-set-key (kbd "M-n") 'next-line)
+(global-set-key (kbd "M-p") 'previous-line)
 
 
 ;; ==============================================
@@ -51,4 +53,3 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (global-set-key (kbd "M-g") 'magit-status)
-
