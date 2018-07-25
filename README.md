@@ -17,6 +17,7 @@
 | `C+l`     | Center text |
 | `C+s`     | Forward search |
 | `C+r`     | Backward search |
+| `M+o`	    | Ace-window |
 
 ### Editing :pencil2:
 | Command | Operation |

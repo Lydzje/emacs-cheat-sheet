@@ -26,7 +26,21 @@
 (custom-set-faces)
 
 ;; ==============================================
+;; EDITING
+;; ==============================================
+(global-unset-key [(control z)])
+(global-set-key [(control z)] 'undo)
+
+;; ==============================================
+;; NAVIGATION
+;; ==============================================
+(add-to-list 'load-path "~/.emacs.d/packages/")
+(global-set-key (kbd "M-o") 'ace-window)
+(setq aw-dispatch-always t)
+
+
+;; ==============================================
 ;; MISCELLANEOUS
 ;; ==============================================
-(setq pcomplete-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
 (setq vc-follow-symlinks nil)
