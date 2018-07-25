@@ -21,6 +21,7 @@
  '(fringe-mode 10 nil (fringe))
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
+ '(package-selected-packages (quote (magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces)
@@ -30,6 +31,7 @@
 ;; ==============================================
 (global-unset-key [(control z)])
 (global-set-key [(control z)] 'undo)
+
 
 ;; ==============================================
 ;; NAVIGATION
@@ -43,4 +45,9 @@
 ;; MISCELLANEOUS
 ;; ==============================================
 (setq read-file-name-completion-ignore-case t)
-(setq vc-follow-symlinks nil)
+(require 'package)
+;; MAGIT
+(add-to-list 'package-archives
+             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+(global-set-key (kbd "M-g") 'magit-status)
+
