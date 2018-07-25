@@ -5,6 +5,7 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (setq inhibit-startup-screen t)
+(setq use-dialog-box nil)
 (when (version<= "26.0.502" emacs-version)
   (global-display-line-numbers-mode))
 
@@ -41,6 +42,24 @@
 (global-set-key (kbd "M-o") 'ace-window)
 (global-set-key (kbd "M-n") 'next-line)
 (global-set-key (kbd "M-p") 'previous-line)
+
+;; LINE_ABOVE
+(defun line-above ()
+  (interactive)
+  (move-beginning-of-line nil)
+  (newline-and-indent)
+  (forward-line -1)
+  (indent-according-to-mode))
+(global-set-key (kbd "<C-S-return>") 'line-above)
+
+;; LINE_BELOW
+(defun line-below ()
+  (interactive)
+  (move-end-of-line nil)
+  (newline-and-indent)
+  (forward-line 0)
+  (indent-according-to-mode))
+(global-set-key (kbd "<C-return>") 'line-below)
 
 
 ;; ==============================================
