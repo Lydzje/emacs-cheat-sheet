@@ -63,6 +63,8 @@
 (global-set-key (kbd "<C-return>") 'line-below)
 
 ;; DRAG_STUFF
+(require 'drag-stuff)
+(drag-stuff-mode t)
 (drag-stuff-global-mode 1)
 (drag-stuff-define-keys)
 
@@ -77,3 +79,5 @@
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (global-set-key (kbd "M-g") 'magit-status)
+
+
