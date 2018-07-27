@@ -22,10 +22,11 @@
  '(fringe-mode 10 nil (fringe))
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
- '(package-selected-packages (quote (magit popup ace-window)))
+ '(package-selected-packages (quote (drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces)
+
 
 ;; ==============================================
 ;; EDITING
@@ -60,6 +61,10 @@
   (forward-line 0)
   (indent-according-to-mode))
 (global-set-key (kbd "<C-return>") 'line-below)
+
+;; DRAG_STUFF
+(drag-stuff-global-mode 1)
+(drag-stuff-define-keys)
 
 
 ;; ==============================================
