@@ -44,6 +44,8 @@
 ;; ==============================================
 (global-unset-key [(control z)])
 (global-set-key [(control z)] 'undo)
+(global-unset-key (kbd "M-r"))
+(global-set-key (kbd "M-r") 'replace-string)
 
 
 ;; ==============================================
