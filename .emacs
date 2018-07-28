@@ -79,6 +79,15 @@
 (drag-stuff-global-mode 1)
 (drag-stuff-define-keys)
 
+;; ACE_JUMP
+(add-to-list 'load-path "~/.emacs.d/packages/ace-jump-mode.el/in/")
+(autoload
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
+(define-key global-map (kbd "M-s") 'ace-jump-mode)
+
 
 ;; ==============================================
 ;; PROGRAMMING LANGUAGES SUPPORT
