@@ -28,7 +28,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -95,13 +95,14 @@
 (global-set-key (kbd "M-l") 'goto-line)
 
 ;; PROJECTILE
-(global-unset-key (kbd "M-o"))
-(global-set-key (kbd "M-o") 'projectile-find-file)
+(global-unset-key (kbd "C-o"))
+(global-set-key (kbd "C-o") 'projectile-find-file)
 
 
 ;; ==============================================
 ;; PROGRAMMING LANGUAGES SUPPORT
 ;; ==============================================
+(add-hook 'after-init-hook 'global-company-mode)
 (setq lua-indent-level 2)
 
 
