@@ -28,7 +28,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -89,6 +89,14 @@
   "Emacs quick move minor mode"
   t)
 (define-key global-map (kbd "M-s") 'ace-jump-mode)
+
+;; GOTO_LINE
+(global-unset-key (kbd "M-l"))
+(global-set-key (kbd "M-l") 'goto-line)
+
+;; PROJECTILE
+(global-unset-key (kbd "M-o"))
+(global-set-key (kbd "M-o") 'projectile-find-file)
 
 
 ;; ==============================================

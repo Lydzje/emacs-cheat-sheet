@@ -19,6 +19,7 @@
 | `C+r`     | Backward search |
 | `M+s`     | Ace-jump |
 | `M+o`	    | Ace-window |
+| `M+l`     | Go to line |
 
 ### Editing :pencil2:
 | Command | Operation |
@@ -43,6 +44,7 @@
 | `C+x, b` | Switch buffer |
 | `C+x, s` | Save some buffers |
 | `M+g`	   | Magit status |
+| `M+o`    | Projectile open file |
 
 ### Windows :white_square_button:
 | Command | Operation |
