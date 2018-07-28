@@ -28,7 +28,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -46,6 +46,12 @@
 (global-set-key [(control z)] 'undo)
 (global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'replace-string)
+
+;; MULTIPLE_CURSORS
+(global-unset-key (kbd "M-c"))
+(global-set-key (kbd "M-c") 'mc/edit-lines)
+(global-unset-key (kbd "M-<down-mouse-1>"))
+(global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
 
 ;; ==============================================

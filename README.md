@@ -34,6 +34,8 @@
 | `M+k`     | Cut from cursor to end of sentence |
 | `C+RET`   | Insert line below |
 | `C+S+RET` | Insert line above |
+| `M+c`     | Insert cursor |
+| `M-mouse1` | Insert cursor at mouse pos |
 
 ### Files and buffers :floppy_disk:
 | Command | Operation |
