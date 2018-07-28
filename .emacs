@@ -81,7 +81,7 @@
 
 
 ;; ==============================================
-;; PROGRAMMING LANGUAJES SUPPORT
+;; PROGRAMMING LANGUAGES SUPPORT
 ;; ==============================================
 (setq lua-indent-level 2)
 
