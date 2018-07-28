@@ -30,6 +30,8 @@
 | `M+d`     | Cut next word |
 | `C+k`     | Cut from cursor to end of line |
 | `M+k`     | Cut from cursor to end of sentence |
+| `C+RET`   | Insert line below |
+| `C+S+RET` | Insert line above |
 
 ### Files and buffers :floppy_disk:
 | Command | Operation |
