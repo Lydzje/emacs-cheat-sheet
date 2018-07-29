@@ -19,16 +19,19 @@
    [default default default italic underline success warning error])
  '(ansi-color-names-vector
    ["#454545" "#d65946" "#6aaf50" "#baba36" "#598bc1" "#ab75c3" "#68a5e9" "#bdbdb3"])
+ '(case-fold-search t)
  '(custom-enabled-themes (quote (granger)))
  '(custom-safe-themes
    (quote
     ("8e4f53b832f5d9ecfdb5faaf68ecfb33d8ac070518dbefde35755e4d7ce61e27" "f8c36b81e754f0421c937a10c1b7cb1e8c2d36ab728a021f1eb90bed38450240" "a16fc5777b99f592e47c9c9f9f09ee098e27bbc87c6540486368fa363f9ccae8" "3b11ab02a8b96f4f4eb67aec91dfc8afc3364f2605eabb54198763325dc8ae7e" "de2b53d3fb8d65566acd9f30a9972380d81b6ff69880c86ae01d253ee4d3e2a3" "72a81c54c97b9e5efcc3ea214382615649ebb539cb4f2fe3a46cd12af72c7607" default)))
  '(fringe-mode 10 nil (fringe))
+ '(magit-todos-ignore-case t)
+ '(magit-todos-scanner (quote magit-todos--scan-with-rg))
  '(main-line-color1 "#222232")
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -37,6 +40,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(add-to-list 'load-path "~/.emacs.d/packages/")
+(package-initialize)
 
 
 ;; ==============================================
@@ -57,7 +63,6 @@
 ;; ==============================================
 ;; NAVIGATION
 ;; ==============================================
-(add-to-list 'load-path "~/.emacs.d/packages/")
 (setq aw-dispatch-always t)
 (global-set-key (kbd "M-o") 'ace-window)
 (global-set-key (kbd "M-n") 'next-line)
@@ -108,6 +113,7 @@
 (add-hook 'after-init-hook 'ivy-mode)
 (global-set-key (kbd "C-s") 'swiper)
 
+
 ;; ==============================================
 ;; PROGRAMMING LANGUAGES SUPPORT
 ;; ==============================================
@@ -120,8 +126,12 @@
 ;; ==============================================
 (setq read-file-name-completion-ignore-case t)
 (require 'package)
+(setq x-select-enable-clipboard t)
 
 ;; MAGIT
 (add-to-list 'package-archives
              '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (global-set-key (kbd "M-g") 'magit-status)
+(add-to-list 'load-path "~/.emacs.d/packages/magit-todos.el/in/")
+(require 'magit-todos)
+(add-hook 'after-init-hook 'magit-todos-mode)
