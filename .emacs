@@ -31,7 +31,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -52,6 +52,9 @@
 (global-set-key [(control z)] 'undo)
 (global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'replace-string)
+
+;; EXPAND_REGION
+(global-set-key (kbd "M-,") 'er/expand-region)
 
 ;; MULTIPLE_CURSORS
 (global-unset-key (kbd "M-c"))
@@ -125,12 +128,18 @@
 ;; MISCELLANEOUS
 ;; ==============================================
 (setq read-file-name-completion-ignore-case t)
-(require 'package)
 (setq x-select-enable-clipboard t)
 
-;; MAGIT
+(require 'package)
+;;(add-to-list 'package-archives
+;;             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
 (add-to-list 'package-archives
-             '("melpa-stable" . "http://stable.melpa.org/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
+
+;;(add-to-list 'package-archives
+;;	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+
+;; MAGIT
 (global-set-key (kbd "M-g") 'magit-status)
 (add-to-list 'load-path "~/.emacs.d/packages/magit-todos.el/in/")
 (require 'magit-todos)

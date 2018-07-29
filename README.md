@@ -1,3 +1,4 @@
+
 # My Emacs Configuration :pencil: :triangular_ruler:
 
 ## Cheat sheet :page_facing_up:
@@ -36,6 +37,7 @@
 | `C+S+RET` | Insert line above |
 | `M+c`     | Insert cursor |
 | `M-mouse1` | Insert cursor at mouse pos |
+| `M-,`     | Expand region |
 
 ### Files and buffers :floppy_disk:
 | Command | Operation |
