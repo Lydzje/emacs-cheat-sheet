@@ -28,7 +28,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -104,6 +104,9 @@
 (global-unset-key (kbd "C-o"))
 (global-set-key (kbd "C-o") 'projectile-find-file)
 
+;; IVY_FAMILY
+(add-hook 'after-init-hook 'ivy-mode)
+(global-set-key (kbd "C-s") 'swiper)
 
 ;; ==============================================
 ;; PROGRAMMING LANGUAGES SUPPORT

@@ -15,7 +15,7 @@
 | `M+a`     | Beginning of sentence |
 | `M+e`     | End of sentence |
 | `C+l`     | Center text |
-| `C+s`     | Forward search |
+| `C+s`     | Swiper search |
 | `C+r`     | Backward search |
 | `M+s`     | Ace-jump |
 | `M+o`	    | Ace-window |
