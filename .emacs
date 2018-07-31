@@ -6,6 +6,8 @@
 (scroll-bar-mode 0)
 (setq inhibit-startup-screen t)
 (setq use-dialog-box nil)
+(add-hook 'prog-mode-hook
+	  (lambda () (idle-highlight-mode t)))
 (when (version<= "26.0.502" emacs-version)
   (global-display-line-numbers-mode))
 
@@ -31,7 +33,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -39,6 +41,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(idle-highlight ((t (:background "#5C88AD" :foreground "black"))))
  '(region ((t (:background "#0000FF" :foreground "white")))))
 
 (add-to-list 'load-path "~/.emacs.d/packages/")
