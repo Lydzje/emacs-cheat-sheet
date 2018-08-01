@@ -132,6 +132,7 @@
 ;; ==============================================
 (setq read-file-name-completion-ignore-case t)
 (setq x-select-enable-clipboard t)
+(electric-pair-mode 1)
 
 (require 'package)
 ;;(add-to-list 'package-archives
