@@ -74,6 +74,9 @@
 (global-set-key (kbd "M-n") 'next-line)
 (global-set-key (kbd "M-p") 'previous-line)
 
+;; BUFFER_MOVE
+(require 'buffer-move)
+
 ;; LINE_ABOVE
 (defun line-above ()
   (interactive)
@@ -152,3 +155,16 @@
 ;; FLYCHECK
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp))
+(add-to-list 'display-buffer-alist
+             `(,(rx bos "*Flycheck errors*" eos)
+              (display-buffer-reuse-window
+               display-buffer-in-side-window)
+              (side            . bottom)
+              (reusable-frames . visible)
+              (window-height   . 0.20)))
+
+;; RESHAPING_WINDOWS
+(global-set-key (kbd "<C-up>") 'enlarge-window)
+(global-set-key (kbd "<C-down>") 'shrink-window)
+(global-set-key (kbd "<C-left>") 'enlarge-window-horizontally)
+(global-set-key (kbd "<C-right>") 'shrink-window-horizontally)
