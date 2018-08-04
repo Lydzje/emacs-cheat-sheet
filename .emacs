@@ -33,7 +33,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -131,7 +131,7 @@
 ;; MISCELLANEOUS
 ;; ==============================================
 (setq read-file-name-completion-ignore-case t)
-(setq x-select-enable-clipboard t)
+(setq select-enable-clipboard t)
 (electric-pair-mode 1)
 
 (require 'package)
@@ -148,3 +148,7 @@
 (add-to-list 'load-path "~/.emacs.d/packages/magit-todos.el/in/")
 (require 'magit-todos)
 (add-hook 'after-init-hook 'magit-todos-mode)
+
+;; FLYCHECK
+(add-hook 'after-init-hook #'global-flycheck-mode)
+(setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp))
