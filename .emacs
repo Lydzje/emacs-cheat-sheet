@@ -33,7 +33,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -127,6 +127,14 @@
 ;; PROGRAMMING LANGUAGES SUPPORT
 ;; ==============================================
 (add-hook 'after-init-hook 'global-company-mode)
+(yas-global-mode 1)
+
+(eval-after-load 'company
+  '(add-to-list
+    'company-backends '(company-c-headers
+			company-lua
+			)))
+
 (setq lua-indent-level 2)
 
 
