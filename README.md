@@ -38,6 +38,7 @@
 | `M+c`     | Insert cursor |
 | `M-mouse1` | Insert cursor at mouse pos |
 | `M-,`     | Expand region |
+| `M-r`     | Query replace |
 
 ### Files and buffers :floppy_disk:
 | Command | Operation |
@@ -59,6 +60,10 @@
 | `C+x, 0`  | Close current window |
 | `C+x, o`  | Focus other window |
 | `C+M+v`   | Scroll other window |
+| `C-UP`    | Enlarge window |
+| `C-DOWN`  | Shrink window |
+| `C-LEFT`  | Enlarge window horizontally |
+| `C-RIGHT` | Shrink window horizontally |
 
 ### Misc :information_source:
 | Command | Operation |

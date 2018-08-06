@@ -54,7 +54,7 @@
 (global-unset-key [(control z)])
 (global-set-key [(control z)] 'undo)
 (global-unset-key (kbd "M-r"))
-(global-set-key (kbd "M-r") 'replace-string)
+(global-set-key (kbd "M-r") 'query-replace)
 
 ;; EXPAND_REGION
 (global-set-key (kbd "M-,") 'er/expand-region)
