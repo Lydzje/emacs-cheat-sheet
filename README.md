@@ -39,6 +39,7 @@
 | `M-mouse1` | Insert cursor at mouse pos |
 | `M-,`     | Expand region |
 | `M-r`     | Query replace |
+| `M-S-;`   | Comment lines |
 
 ### Files and buffers :floppy_disk:
 | Command | Operation |
