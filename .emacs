@@ -33,7 +33,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -133,7 +133,13 @@
   '(add-to-list
     'company-backends '(company-c-headers
 			company-lua
+			company-web-html
 			)))
+
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(global-set-key (kbd "<C-return>") 'line-below)
+
+(require 'company-web-html)
 
 (setq lua-indent-level 2)
 
