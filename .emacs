@@ -33,7 +33,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (highlight-indent-guides php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343"))
 (custom-set-faces
@@ -121,6 +121,11 @@
 ;; IVY_FAMILY
 (add-hook 'after-init-hook 'ivy-mode)
 (global-set-key (kbd "C-s") 'swiper)
+
+;; HIGHLIGHT_INDENT_GUIDES
+(setq highlight-indent-guides-method 'column)
+(setq highlight-indent-guides-responsive 'stack)
+(add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 
 
 ;; ==============================================
