@@ -76,3 +76,4 @@
 | `C+u, number, command` | Number arg to command |
 | `C+SPC`  | Mark cursor position |
 | `M+x` | EXtend command |
+| `C+<` | Compile |
