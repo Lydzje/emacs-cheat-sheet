@@ -78,7 +78,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(idle-highlight ((t (:background "#5C88AD" :foreground "black"))))
+ '(idle-highlight ((t (:background "#ffc730" :foreground "black"))))
  ;;'(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
  ;;'(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil))))
  '(region ((t (:background "#0000FF" :foreground "white")))))
@@ -229,3 +229,6 @@
 (global-set-key (kbd "<C-down>") 'shrink-window)
 (global-set-key (kbd "<C-left>") 'enlarge-window-horizontally)
 (global-set-key (kbd "<C-right>") 'shrink-window-horizontally)
+
+;; COMPILE_SHORTCUT
+(global-set-key (kbd "C-<") 'compile)
