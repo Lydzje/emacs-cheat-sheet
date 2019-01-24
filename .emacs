@@ -8,7 +8,7 @@
 (setq inhibit-startup-screen t)
 (setq use-dialog-box nil)
 (add-hook 'prog-mode-hook
-	  (lambda () (idle-highlight-mode t)))
+          (lambda () (idle-highlight-mode t)))
 (when (version<= "26.0.502" emacs-version)
   (global-display-line-numbers-mode))
 
@@ -48,7 +48,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (highlight-indent-guides php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (ac-js2 js2-mode highlight-indent-guides php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(vc-annotate-background "#FFFFFD")
@@ -79,8 +79,6 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(idle-highlight ((t (:background "#ffc730" :foreground "black"))))
- ;;'(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
- ;;'(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil))))
  '(region ((t (:background "#0000FF" :foreground "white")))))
 
 (add-to-list 'load-path "~/.emacs.d/packages/")
@@ -94,6 +92,7 @@
 (global-set-key [(control z)] 'undo)
 (global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'query-replace)
+(setq indent-tabs-mode nil)
 
 ;; EXPAND_REGION
 (global-set-key (kbd "M-,") 'er/expand-region)
@@ -176,12 +175,14 @@
 (eval-after-load 'company
   '(add-to-list
     'company-backends '(company-c-headers
-			company-lua
-			company-web-html
-			)))
+                        company-lua
+                        company-web-html
+                        )))
 
 ;; EMMET
 (add-hook 'sgml-mode-hook 'emmet-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-hook 'company-backends 'ac-js2-company)
 (add-hook 'css-mode-hook 'emmet-mode)
 
 (global-set-key (kbd "<C-return>") 'line-below)
@@ -218,11 +219,11 @@
 (setq-default flycheck-disabled-checkers '(emacs-lisp-checkdoc emacs-lisp))
 (add-to-list 'display-buffer-alist
              `(,(rx bos "*Flycheck errors*" eos)
-              (display-buffer-reuse-window
-               display-buffer-in-side-window)
-              (side            . bottom)
-              (reusable-frames . visible)
-              (window-height   . 0.20)))
+               (display-buffer-reuse-window
+                display-buffer-in-side-window)
+               (side            . bottom)
+               (reusable-frames . visible)
+               (window-height   . 0.20)))
 
 ;; RESHAPING_WINDOWS
 (global-set-key (kbd "<C-up>") 'enlarge-window)
