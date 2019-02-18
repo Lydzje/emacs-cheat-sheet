@@ -48,7 +48,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (ac-js2 js2-mode highlight-indent-guides php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (all-the-icons xpm ac-js2 js2-mode highlight-indent-guides php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(vc-annotate-background "#FFFFFD")
@@ -92,7 +92,6 @@
 (global-set-key [(control z)] 'undo)
 (global-unset-key (kbd "M-r"))
 (global-set-key (kbd "M-r") 'query-replace)
-(setq indent-tabs-mode nil)
 
 ;; EXPAND_REGION
 (global-set-key (kbd "M-,") 'er/expand-region)
@@ -155,6 +154,14 @@
 ;; PROJECTILE
 (global-unset-key (kbd "C-o"))
 (global-set-key (kbd "C-o") 'projectile-find-file)
+
+;; NEOTREE
+(add-to-list 'load-path "~/.emacs.d/packages/neotree")
+(require 'neotree)
+(global-set-key (kbd "C-c p") 'neotree-toggle)
+(setq neo-theme 'nerd)
+(setq neo-smart-open t)
+(setq projectile-switch-project-action 'neotree-projectile-action)
 
 ;; IVY_FAMILY
 (add-hook 'after-init-hook 'ivy-mode)
@@ -233,3 +240,5 @@
 
 ;; COMPILE_SHORTCUT
 (global-set-key (kbd "C-<") 'compile)
+
+(setq indent-tabs-mode nil)

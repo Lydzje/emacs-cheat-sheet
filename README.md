@@ -21,6 +21,7 @@
 | `M+s`     | Ace-jump |
 | `M+o`	    | Ace-window |
 | `M+l`     | Go to line |
+| `C+c p`   | Toggle Neotree buffer |
 
 ### Editing :pencil2:
 | Command | Operation |
