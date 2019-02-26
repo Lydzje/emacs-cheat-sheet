@@ -48,7 +48,7 @@
  '(main-line-color2 "#333343")
  '(package-selected-packages
    (quote
-    (all-the-icons xpm ac-js2 js2-mode highlight-indent-guides php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
+    (web-mode all-the-icons xpm ac-js2 js2-mode highlight-indent-guides php-mode emmet-mode company-web company-lua company-c-headers yasnippet-snippets yasnippet flycheck idle-highlight-mode expand-region pcre2el hl-todo f el-get anaphora a ripgrep swiper ac-html-csswatcher ivy multiple-cursors company projectile markdown-preview-mode markdown-mode lua-mode drag-stuff magit popup ace-window)))
  '(powerline-color1 "#222232")
  '(powerline-color2 "#333343")
  '(vc-annotate-background "#FFFFFD")
@@ -162,6 +162,7 @@
 (setq neo-theme 'nerd)
 (setq neo-smart-open t)
 (setq projectile-switch-project-action 'neotree-projectile-action)
+(setq-default neo-show-hidden-files t)
 
 ;; IVY_FAMILY
 (add-hook 'after-init-hook 'ivy-mode)
@@ -191,6 +192,24 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 (add-hook 'company-backends 'ac-js2-company)
 (add-hook 'css-mode-hook 'emmet-mode)
+(add-hook 'php-mode-hook 'web-mode)
+
+(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.[agj]sp\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(setq web-mode-code-indent-offset 2)
+
+(setq web-mode-engines-alist
+      '(("php"    . "\\.phtml\\'")
+        ("blade"  . "\\.blade\\."))
+)
 
 (global-set-key (kbd "<C-return>") 'line-below)
 
