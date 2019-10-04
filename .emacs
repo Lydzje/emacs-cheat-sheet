@@ -102,6 +102,12 @@
 (global-unset-key (kbd "M-<down-mouse-1>"))
 (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)
 
+;; UNTABIFY_SHORTCUT
+(defun untabify-buffer ()
+  "Untabify current buffer"
+  (interactive)
+  (untabify (point-min) (point-max)))
+(global-set-key (kbd "C-u") 'untabify-buffer)
 
 ;; ==============================================
 ;; NAVIGATION
@@ -205,6 +211,7 @@
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; (setq web-mode-markup-indent-offset 4)
+(setq web-mode-enable-auto-indentation nil)
 
 (setq web-mode-engines-alist
       '(("php"    . "\\.phtml\\'")
@@ -232,7 +239,7 @@
              '("melpa" . "http://melpa.org/packages/") t)
 
 ;;(add-to-list 'package-archives
-;;	     '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;;           '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 ;; MAGIT
 (global-set-key (kbd "M-g") 'magit-status)
